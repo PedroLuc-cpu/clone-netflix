@@ -1,0 +1,104 @@
+.featured{
+    height: 100vh;
+}
+
+.featured--vertical{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to top, #111 10%, transparent 90%);
+}
+
+.featured--horizontal{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(to right, #111 30%, transparent 70%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+}
+
+.featured--name{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.featured--info{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.featured--points,.featured--year,.featured--year{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.featured--points{
+    color: #46d369;
+}
+.featured--descriptions{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #999;
+    max-width: 40%;
+}
+
+.featured-watchbuntton, .featured-mylistbuntton{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 25px;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition:  all ease 0.2s;
+    opacity: 1;
+    text-decoration: none;
+}
+
+.featured-watchbuntton{
+    background-color: #fff;
+    color: #000;
+}
+.featured-mylistbuntton{
+    background-color: #333;
+    color: #fff;
+    
+}
+
+.featured-watchbuntton:hover, .featured-mylistbuntton:hover{
+    opacity:  0.7;
+
+}
+
+.featured--genres{
+    margin-top: 15px;
+    font-size: 18px;
+    color: #999;
+}
+
+@media (max-with:760px){
+    .featured{
+        height: 90vh;
+    }
+
+    .featured--name{
+        font-size: 40px;
+    }
+    .featured--info{
+        font-size: 16px;
+    }
+    .featured--descriptions{
+        font-size: 14px;
+        max-width: 100%;
+        margin-right: 30px ;
+    }
+    .featured-watchbuntton, .featured-mylistbuntton{
+        font-size: 16px;
+    }
+
+    .featured--genres{
+        font-size: 14px;
+    }
+}
