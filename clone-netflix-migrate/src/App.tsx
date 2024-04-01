@@ -24,13 +24,13 @@ interface Movie {
 }
 
 interface Item {
-  results: Movie
+  results: Movie[]
 }
 
 interface getHomelistInterfaces {
   slug: string;
   title: string
-  items : Item[]
+  items : Item
 }
 
 function App() {
@@ -75,8 +75,7 @@ function App() {
     };
   }, []);
 
-  console.table(FeaturedData)
-  console.table(movieList)
+  // console.table(movieList)
 
   return (
     <div className="page">

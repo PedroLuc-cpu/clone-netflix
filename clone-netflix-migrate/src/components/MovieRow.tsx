@@ -23,12 +23,12 @@ interface Movie {
 }
 
 interface Item {
-    results: Movie
+    results: Movie[]
 }
 
 interface MovieRowProps {
     title: string;
-    items: Item[];
+    items: Item;
 }
 
 
@@ -46,13 +46,14 @@ export default function MovieRow({title, items}: MovieRowProps){
 
     const hanlerighttArrow = () =>{
         let x = scrollX - Math.round(window.innerWidth / 2)
-        const listW = items.length * 150
+        const listW = items.results.length * 150
         if((window.innerWidth - listW) > x){
             x = (window.innerWidth - listW) - 60
         }
         setscrollX(x)
     }
 
+    console.log(items)
     return (
         <div className="movieRow">
             <h2>{title}</h2>
@@ -66,10 +67,10 @@ export default function MovieRow({title, items}: MovieRowProps){
 
             <div className="movieRow--listarea">
                     <div className="movieRow--list" 
-                    style={{marginLeft:scrollX, width: items.length * 150}}>
-                    {items.length >0 && items.map((item, key)=>(
+                    style={{marginLeft:scrollX, width: items.results.length * 150}}>
+                    {items.results.length >0 && items.results.map((item, key)=>(
                     <div key={key} className="movieRow--item">
-                        <img src={`https://image.tmdb.org/t/p/w300${item.results.backdrop_path}`} alt={item.results.original_title}></img>
+                        <img src={`https://image.tmdb.org/t/p/w300${item.backdrop_path}`} alt={item.original_title}></img>
                     </div>
                         
                 ))}
