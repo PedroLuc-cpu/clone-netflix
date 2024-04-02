@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Header from "./components/Header";
-import MovieRow from "./components/MovieRow";
 import tmdb from "./tmdb";
 import FeaturedMovie, { FeaturedMovieProps } from "./components/FeaturedMovie";
+import Header from "./components/Header";
+import MovieRow from "./components/MovieRow";
 
 interface Movie {
     id: string;
@@ -42,7 +42,6 @@ function App() {
   useEffect(() => {
     const loadAll = async () => {
   try {
-    setFeaturedData(null);
     const list = await tmdb.getHomelist();
     setMovieList(list);
 
@@ -75,7 +74,7 @@ function App() {
     };
   }, []);
 
-  // console.table(movieList)
+  console.table(FeaturedData)
 
   return (
     <div className="page">

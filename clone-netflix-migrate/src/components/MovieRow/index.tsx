@@ -60,7 +60,6 @@ export default function MovieRow({title, items}: MovieRowProps){
             <div className="movieRow--left" onClick={hanleleftArrow}>
                     <NavigateBeforeIcon style={{fontSize:50}} />
             </div>
-                {/* movie--right */}
             <div className="movieRow-right" onClick={hanlerighttArrow}>
                     <NavigateNextIcon style={{fontSize:50}}/>
             </div>

@@ -1,6 +1,5 @@
 import './FeaturedMovie.css';
 
-
 export interface FeaturedMovieProps {
     id: string;
     first_air_date: string
